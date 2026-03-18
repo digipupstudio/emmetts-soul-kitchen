@@ -80,7 +80,7 @@
   },
   "menuPage": {
     "title": "Menú de Comida Soul",
-    "subtitle": "Carne más 1, 2 o 3 Acompañamientos",
+    "subtitle": "Elige Tu Plato",
     "dailyNotice": "El menú cambia diaria/semanalmente",
     "meatsTitle": "Carnes Soul Food y Más",
     "sidesTitle": "Acompañamientos Soul Food",
@@ -118,7 +118,14 @@
       "coleSlaw": "Ensalada de Col",
       "cornOnCob": "Elote en Mazorca"
     },
-    "orderNotice": "Todas las comidas vienen con tu elección de carne y 1, 2 o 3 acompañamientos.",
+    "orderNotice": "Todas las comidas vienen con tu elección de carne y acompañamientos.",
+    "pricing": [
+      "1 Carne + 1 Acompañamiento — $12",
+      "1 Carne + 2 Acompañamientos — $14",
+      "1 Carne + 3 Acompañamientos — $16",
+      "2 Filetes de Bagre + 2 Acompañamientos — $19"
+    ],
+    "includesTaxes": "Incluye impuestos",
     "sidesAndMeatsTitle": "Carnes y Acompañamientos",
     "allMeats": [
       "Pollo Frito",
