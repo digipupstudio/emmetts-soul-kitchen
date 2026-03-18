@@ -81,7 +81,7 @@ const Menu = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12"
+            className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12"
           >
             <div className="w-full lg:w-auto flex-shrink-0">
               <h1 className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black drop-shadow-lg leading-tight text-center lg:text-left">
