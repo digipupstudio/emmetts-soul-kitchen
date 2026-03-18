@@ -89,7 +89,7 @@ const Menu = () => {
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
                 {t("menuPage.subtitle")}
               </p>
-              <div className="space-y-1 sm:space-y-2 text-left max-w-xs mx-auto">
+              <div className="space-y-1 sm:space-y-2 text-center max-w-xs mx-auto">
                 {(t("menuPage.pricing", { returnObjects: true }) as string[]).map((item, idx) => (
                   <p key={idx} className="text-base sm:text-lg md:text-xl font-semibold">
                     {item}
