@@ -115,7 +115,7 @@ const Menu = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-8 sm:mb-12"
+            className="mb-12 sm:mb-16"
           >
             <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
@@ -195,7 +195,7 @@ const Menu = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-8 sm:mb-12"
+            className="mb-12 sm:mb-16"
           >
             <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
