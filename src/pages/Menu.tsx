@@ -76,32 +76,38 @@ const Menu = () => {
       {/* Hero */}
       <section className="bg-primary text-primary-foreground py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 gingham-pattern opacity-10" />
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12"
           >
-            <h1 className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-3 sm:mb-4 md:mb-6 drop-shadow-lg leading-tight">
-              {t("menuPage.title")}
-            </h1>
-            <div className="bg-white/20 backdrop-blur-md w-full sm:w-auto inline-block px-3 xs:px-4 sm:px-6 md:px-8 py-3 xs:py-4 sm:py-6 md:py-8 rounded-lg sm:rounded-xl md:rounded-2xl border border-white/30 mx-auto">
-              <p className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2 xs:mb-3 sm:mb-4">
-                {t("menuPage.subtitle")}
-              </p>
-              <div className="space-y-1 sm:space-y-2 text-center">
-                {(t("menuPage.pricing", { returnObjects: true }) as string[]).map((item, idx) => (
-                  <p key={idx} className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
-                    {item}
-                  </p>
-                ))}
+            <div className="w-full lg:w-auto flex-shrink-0">
+              <h1 className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black drop-shadow-lg leading-tight text-center lg:text-left">
+                {t("menuPage.title")}
+              </h1>
+            </div>
+
+            <div className="w-full lg:w-auto flex-shrink-0">
+              <div className="bg-white/20 backdrop-blur-md px-3 xs:px-4 sm:px-6 md:px-8 py-3 xs:py-4 sm:py-6 md:py-8 rounded-lg sm:rounded-xl md:rounded-2xl border border-white/30">
+                <p className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold mb-2 xs:mb-3 sm:mb-4 text-center">
+                  {t("menuPage.subtitle")}
+                </p>
+                <div className="space-y-1 sm:space-y-2 text-center">
+                  {(t("menuPage.pricing", { returnObjects: true }) as string[]).map((item, idx) => (
+                    <p key={idx} className="text-xs xs:text-sm sm:text-base md:text-lg font-semibold">
+                      {item}
+                    </p>
+                  ))}
+                </div>
+                <p className="text-xs xs:text-sm sm:text-base opacity-90 mt-2 xs:mt-3 sm:mt-4 font-medium italic text-center">
+                  {t("menuPage.includesTaxes")}
+                </p>
+                <p className="text-xs sm:text-sm opacity-75 mt-1 font-medium italic text-center">
+                  {t("menuPage.dailyNotice")}
+                </p>
               </div>
-              <p className="text-xs xs:text-sm sm:text-base md:text-lg opacity-90 mt-2 xs:mt-3 sm:mt-4 font-medium italic">
-                {t("menuPage.includesTaxes")}
-              </p>
-              <p className="text-xs sm:text-sm md:text-base opacity-75 mt-1 font-medium italic">
-                {t("menuPage.dailyNotice")}
-              </p>
             </div>
           </motion.div>
         </div>
