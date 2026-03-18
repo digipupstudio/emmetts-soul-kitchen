@@ -114,24 +114,24 @@ const Menu = () => {
       </section>
 
       {/* Soul Food Meats & More Section */}
-      <section className="section-padding bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-background">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 sm:mb-16"
+            className="mb-8 sm:mb-12 md:mb-16"
           >
-            <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 border-b-4 border-primary pb-2 sm:pb-3 md:pb-4">
+              <h2 className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
                 Soul Food Meats & More
               </h2>
             </div>
           </motion.div>
 
           {/* Responsive Grid: 1 col (mobile), 2 cols (tablet), 3 cols (desktop), 4 cols (xl) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {soulFoodMeats.map((item, index) => (
               <motion.div
                 key={item.name}
@@ -147,7 +147,7 @@ const Menu = () => {
               >
                 {/* Image Container */}
                 {item.image && (
-                  <div className="w-full aspect-square sm:aspect-[4/3] overflow-hidden rounded-t-lg bg-gray-200">
+                  <div className="w-full aspect-square md:aspect-[4/3] overflow-hidden rounded-t-lg bg-gray-200">
                     <img
                       src={item.image}
                       alt={item.name}
@@ -157,10 +157,10 @@ const Menu = () => {
                 )}
 
                 {/* Content Container */}
-                <div className="flex flex-col flex-grow p-4">
+                <div className="flex flex-col flex-grow p-3 sm:p-4 md:p-5">
                   {/* Title with Badge */}
-                  <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <h3 className="font-heading font-black text-base sm:text-lg text-foreground">
+                  <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-2 sm:mb-3">
+                    <h3 className="font-heading font-black text-sm xs:text-base sm:text-lg text-foreground">
                       {item.name}
                     </h3>
                     {item.featured && (
@@ -171,7 +171,7 @@ const Menu = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-grow">
                     {item.description}
                   </p>
                 </div>
@@ -180,12 +180,12 @@ const Menu = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="text-center mt-12 sm:mt-16 md:mt-20">
+          <div className="text-center mt-8 sm:mt-12 md:mt-16 lg:mt-20">
             <Button
               variant="soul"
               size="lg"
               asChild
-              className="px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-full shadow-2xl hover:scale-105 transition-transform"
+              className="px-4 xs:px-6 sm:px-8 md:px-12 py-3 xs:py-4 sm:py-6 md:py-8 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl rounded-full shadow-2xl hover:scale-105 transition-transform"
             >
               <Link to="/contact">{t("common.contactToOrder")}</Link>
             </Button>
@@ -194,24 +194,24 @@ const Menu = () => {
       </section>
 
       {/* Soul Food Sides Section */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 sm:mb-16"
+            className="mb-8 sm:mb-12 md:mb-16"
           >
-            <div className="flex items-center gap-3 mb-6 sm:mb-8 border-b-4 border-primary pb-3 sm:pb-4">
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 border-b-4 border-primary pb-2 sm:pb-3 md:pb-4">
+              <h2 className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
                 Soul Food Sides
               </h2>
             </div>
           </motion.div>
 
           {/* Responsive Grid: 1 col (mobile), 2 cols (tablet), 3 cols (desktop), 4 cols (xl) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
               <motion.div
                 key={side}
@@ -221,8 +221,8 @@ const Menu = () => {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="flex flex-col h-full overflow-hidden rounded-lg shadow-warm border-2 border-secondary/30 bg-gradient-to-br from-secondary/20 to-primary/10 transition-all hover:border-secondary/70 hover:shadow-lg hover:scale-105"
               >
-                <div className="flex flex-col flex-grow items-center justify-center p-4 min-h-32">
-                  <h3 className="font-heading font-bold text-sm sm:text-base text-foreground text-center leading-tight">
+                <div className="flex flex-col flex-grow items-center justify-center p-3 sm:p-4 md:p-5 min-h-28 sm:min-h-32 md:min-h-40">
+                  <h3 className="font-heading font-bold text-xs xs:text-sm sm:text-base text-foreground text-center leading-tight">
                     {side}
                   </h3>
                 </div>
