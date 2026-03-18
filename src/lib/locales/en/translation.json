@@ -80,7 +80,7 @@
   },
   "menuPage": {
     "title": "Soul Food Menu",
-    "subtitle": "Meat plus 1, 2 or 3 Sides",
+    "subtitle": "Pick Your Plate",
     "dailyNotice": "Menu changes daily/weekly",
     "meatsTitle": "Soul Food Meats & More",
     "sidesTitle": "Soul Food Sides",
@@ -118,7 +118,14 @@
       "coleSlaw": "Cole Slaw",
       "cornOnCob": "Corn on the Cob"
     },
-    "orderNotice": "All meals come with your choice of meat and 1, 2 or 3 sides.",
+    "orderNotice": "All meals come with your choice of meat and sides.",
+    "pricing": [
+      "1 Meat + 1 Side — $12",
+      "1 Meat + 2 Sides — $14",
+      "1 Meat + 3 Sides — $16",
+      "2 Catfish Filets + 2 Sides — $19"
+    ],
+    "includesTaxes": "Includes taxes",
     "sidesAndMeatsTitle": "Sides & Meats",
     "allMeats": [
       "Fried Chicken",
