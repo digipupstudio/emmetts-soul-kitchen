@@ -245,6 +245,10 @@
     "idealFor": "Ideal for office parties, church events, and celebrations",
     "forWeddings": "For weddings, corporate events, and large celebrations",
     "inquiryForm": "Request a Catering Quote",
+    "contactTitle": "Get in Touch for Catering",
+    "contactDesc": "Contact us directly to discuss your catering needs and get a customized quote for your event.",
+    "phone": "Phone",
+    "email": "Email",
     "consultationReceived": "Consultation Received!",
     "consultationDesc": "We'll contact you within 24 hours to discuss your event.",
     "form": {

@@ -1,122 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Users, Utensils, Calendar, Check, Phone, Send, ChefHat, PartyPopper } from "lucide-react";
+import { Utensils, Calendar, Phone, Mail } from "lucide-react";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-
-const cateringPackages = [
-  {
-    name: "Reunión Familiar",
-    serves: "10-20 invitados",
-    description: "Perfecto para reuniones familiares, fiestas de cumpleaños y pequeñas reuniones",
-    features: [
-      "Elección de 2 platos principales",
-      "2-3 guarniciones incluidas",
-      "Pan de maíz",
-      "Té dulce",
-      "Platos y utensilios desechables",
-    ],
-    popular: false,
-    icon: Users,
-  },
-  {
-    name: "Fiesta de Comida Soul",
-    serves: "25-50 invitados",
-    description: "Ideal para fiestas de oficina, eventos de iglesia y celebraciones",
-    features: [
-      "Elección de 3 platos principales",
-      "3-4 guarniciones incluidas",
-      "Pan de maíz y panecillos",
-      "Té dulce y limonada",
-      "1 bandeja de postres",
-      "Configuración completa incluida",
-      "Se proporcionan platos de calentamiento",
-    ],
-    popular: true,
-    icon: ChefHat,
-  },
-  {
-    name: "Gran Celebración",
-    serves: "50-100+ invitados",
-    description: "Para bodas, eventos corporativos y grandes celebraciones",
-    features: [
-      "Elección de 4 platos principales",
-      "4-5 guarniciones incluidas",
-      "Pan de maíz, panecillos y galletas",
-      "Servicio completo de bebidas",
-      "2 bandejas de postres",
-      "Montaje y desmontaje completo",
-      "Personal de servicio disponible",
-      "Opciones de menú personalizadas",
-    ],
-    popular: false,
-    icon: PartyPopper,
-  },
-];
-
-const menuOptions = {
-  entrees: [
-    "Pollo Frito",
-    "Chuletas de Cerdo Cubiertas",
-    "Pollo al Horno",
-    "Bagre Frito",
-    "Puntas de Costilla BBQ",
-    "Pastel de Carne",
-    "Rabo de Buey",
-  ],
-  sides: [
-    "Macarrones con Queso",
-    "Verduras (Collard Greens)",
-    "Batatas Confitadas",
-    "Judías Verdes",
-    "Puré de Papas",
-    "Repollo",
-    "Guisantes de Ojos Negros",
-    "Ensalada de Col",
-    "Maíz en la Mazorca",
-  ],
-  desserts: [
-    "Pastel de Durazno",
-    "Pudín de Plátano",
-    "Pastel de Batata",
-    "Pastel Red Velvet",
-  ],
-};
 
 const Catering = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    eventDate: "",
-    guestCount: "",
-    eventType: "",
-    package: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: t("cateringPage.consultationReceived"),
-      description: t("cateringPage.consultationDesc"),
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      eventDate: "",
-      guestCount: "",
-      eventType: "",
-      package: "",
-      message: "",
-    });
-  };
 
   return (
     <Layout>
@@ -143,7 +32,7 @@ const Catering = () => {
         </div>
       </section>
 
-      {/* Catering Inquiry Form */}
+      {/* Contact Information */}
       <section className="section-padding bg-secondary text-secondary-foreground">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto">
@@ -152,13 +41,13 @@ const Catering = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-8"
+              className="text-center mb-12"
             >
               <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-                {t("cateringPage.inquiryForm") || "Request a Catering Quote"}
+                {t("cateringPage.contactTitle") || "Get in Touch for Catering"}
               </h2>
               <p className="text-secondary-foreground/80">
-                Fill out the form below and we'll get back to you with a customized quote for your event.
+                {t("cateringPage.contactDesc") || "Contact us directly to discuss your catering needs and get a customized quote for your event."}
               </p>
             </motion.div>
 
@@ -167,136 +56,48 @@ const Catering = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-card rounded-2xl p-8 shadow-warm"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
             >
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("cateringPage.form.name") || "Your Name"}
-                    </label>
-                    <Input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="John Doe"
-                      required
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("cateringPage.form.email") || "Email"}
-                    </label>
-                    <Input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="john@example.com"
-                      required
-                      className="h-12"
-                    />
-                  </div>
+              <a
+                href="tel:+16152308868"
+                className="flex flex-col items-center gap-4 p-6 bg-card rounded-xl hover:shadow-warm transition-shadow text-center"
+              >
+                <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center">
+                  <Phone className="w-7 h-7 text-accent" />
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("cateringPage.form.phone") || "Phone Number"}
-                    </label>
-                    <Input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="(555) 123-4567"
-                      required
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("cateringPage.form.eventDate") || "Event Date"}
-                    </label>
-                    <Input
-                      type="date"
-                      value={formData.eventDate}
-                      onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                      required
-                      className="h-12"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("cateringPage.form.guestCount") || "Number of Guests"}
-                    </label>
-                    <Input
-                      type="number"
-                      value={formData.guestCount}
-                      onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                      placeholder="50"
-                      min="1"
-                      required
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("cateringPage.form.package") || "Preferred Package"}
-                    </label>
-                    <select
-                      value={formData.package}
-                      onChange={(e) => setFormData({ ...formData, package: e.target.value })}
-                      className="h-12 px-3 rounded-md border border-input bg-background"
-                      required
-                    >
-                      <option value="">Select a package</option>
-                      {cateringPackages.map((pkg) => (
-                        <option key={pkg.name} value={pkg.name}>
-                          {pkg.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("cateringPage.form.eventType") || "Event Type"}
-                  </label>
-                  <Input
-                    type="text"
-                    value={formData.eventType}
-                    onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
-                    placeholder="e.g., Wedding, Corporate Event, Birthday Party"
-                    required
-                    className="h-12"
-                  />
+                  <p className="font-semibold text-foreground">{t("cateringPage.phone") || "Phone"}</p>
+                  <p className="text-secondary-foreground/80 text-sm">(615) 230-8868</p>
                 </div>
+              </a>
 
+              <button
+                onClick={() => window.location.href = 'mailto:Info@emmettsoulfood.com'}
+                className="flex flex-col items-center gap-4 p-6 bg-card rounded-xl hover:shadow-warm transition-shadow text-center cursor-pointer border-none bg-inherit"
+              >
+                <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center">
+                  <Mail className="w-7 h-7 text-accent" />
+                </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("cateringPage.form.message") || "Additional Details"}
-                  </label>
-                  <Textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your event, dietary requirements, or any special requests..."
-                    rows={5}
-                    className="resize-none"
-                  />
+                  <p className="font-semibold text-foreground">{t("cateringPage.email") || "Email"}</p>
+                  <p className="text-secondary-foreground/80 text-sm">Info@emmettsoulfood.com</p>
                 </div>
+              </button>
 
-                <Button type="submit" variant="soul" size="lg" className="w-full">
-                  {t("cateringPage.form.submitBtn") || "Request Quote"}
-                  <Send className="w-4 h-4 ml-2" />
-                </Button>
-              </form>
+              <a
+                href="https://www.facebook.com/emmettskitchen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-4 p-6 bg-card rounded-xl hover:shadow-warm transition-shadow text-center"
+              >
+                <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center">
+                  <Phone className="w-7 h-7 text-accent" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Facebook</p>
+                  <p className="text-secondary-foreground/80 text-sm">@emmettskitchen</p>
+                </div>
+              </a>
             </motion.div>
           </div>
         </div>
