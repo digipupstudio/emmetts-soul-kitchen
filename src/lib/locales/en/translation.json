@@ -244,8 +244,20 @@
     "perfectFor": "Perfect for family gatherings, birthday parties, and small get-togethers",
     "idealFor": "Ideal for office parties, church events, and celebrations",
     "forWeddings": "For weddings, corporate events, and large celebrations",
+    "inquiryForm": "Request a Catering Quote",
     "consultationReceived": "Consultation Received!",
-    "consultationDesc": "We'll contact you within 24 hours to discuss your event."
+    "consultationDesc": "We'll contact you within 24 hours to discuss your event.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "eventDate": "Event Date",
+      "guestCount": "Number of Guests",
+      "package": "Preferred Package",
+      "eventType": "Event Type",
+      "message": "Additional Details",
+      "submitBtn": "Request Quote"
+    }
   },
   "reviewsPage": {
     "title": "Customer Reviews",
