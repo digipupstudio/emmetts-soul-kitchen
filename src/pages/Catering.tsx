@@ -143,23 +143,162 @@ const Catering = () => {
         </div>
       </section>
 
-      {/* Available Soon */}
-      <section className="section-padding bg-background">
+      {/* Catering Inquiry Form */}
+      <section className="section-padding bg-secondary text-secondary-foreground">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto text-center"
-          >
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t("cateringPage.availableSoon")}
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              {t("cateringPage.availableDesc")}
-            </p>
-          </motion.div>
+          <div className="max-w-2xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-8"
+            >
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+                {t("cateringPage.inquiryForm") || "Request a Catering Quote"}
+              </h2>
+              <p className="text-secondary-foreground/80">
+                Fill out the form below and we'll get back to you with a customized quote for your event.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-card rounded-2xl p-8 shadow-warm"
+            >
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("cateringPage.form.name") || "Your Name"}
+                    </label>
+                    <Input
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="John Doe"
+                      required
+                      className="h-12"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("cateringPage.form.email") || "Email"}
+                    </label>
+                    <Input
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="john@example.com"
+                      required
+                      className="h-12"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("cateringPage.form.phone") || "Phone Number"}
+                    </label>
+                    <Input
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="(555) 123-4567"
+                      required
+                      className="h-12"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("cateringPage.form.eventDate") || "Event Date"}
+                    </label>
+                    <Input
+                      type="date"
+                      value={formData.eventDate}
+                      onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
+                      required
+                      className="h-12"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("cateringPage.form.guestCount") || "Number of Guests"}
+                    </label>
+                    <Input
+                      type="number"
+                      value={formData.guestCount}
+                      onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
+                      placeholder="50"
+                      min="1"
+                      required
+                      className="h-12"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("cateringPage.form.package") || "Preferred Package"}
+                    </label>
+                    <select
+                      value={formData.package}
+                      onChange={(e) => setFormData({ ...formData, package: e.target.value })}
+                      className="h-12 px-3 rounded-md border border-input bg-background"
+                      required
+                    >
+                      <option value="">Select a package</option>
+                      {cateringPackages.map((pkg) => (
+                        <option key={pkg.name} value={pkg.name}>
+                          {pkg.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("cateringPage.form.eventType") || "Event Type"}
+                  </label>
+                  <Input
+                    type="text"
+                    value={formData.eventType}
+                    onChange={(e) => setFormData({ ...formData, eventType: e.target.value })}
+                    placeholder="e.g., Wedding, Corporate Event, Birthday Party"
+                    required
+                    className="h-12"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("cateringPage.form.message") || "Additional Details"}
+                  </label>
+                  <Textarea
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    placeholder="Tell us about your event, dietary requirements, or any special requests..."
+                    rows={5}
+                    className="resize-none"
+                  />
+                </div>
+
+                <Button type="submit" variant="soul" size="lg" className="w-full">
+                  {t("cateringPage.form.submitBtn") || "Request Quote"}
+                  <Send className="w-4 h-4 ml-2" />
+                </Button>
+              </form>
+            </motion.div>
+          </div>
         </div>
       </section>
 

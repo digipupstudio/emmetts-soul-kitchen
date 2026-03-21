@@ -244,8 +244,20 @@
     "perfectFor": "Perfecto para reuniones familiares, fiestas de cumpleaños y pequeñas reuniones",
     "idealFor": "Ideal para fiestas de oficina, eventos de iglesia y celebraciones",
     "forWeddings": "Para bodas, eventos corporativos y grandes celebraciones",
+    "inquiryForm": "Solicitar Cotización de Catering",
     "consultationReceived": "¡Consulta Recibida!",
-    "consultationDesc": "Nos pondremos en contacto contigo dentro de las 24 horas para discutir tu evento."
+    "consultationDesc": "Nos pondremos en contacto contigo dentro de las 24 horas para discutir tu evento.",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Correo Electrónico",
+      "phone": "Número de Teléfono",
+      "eventDate": "Fecha del Evento",
+      "guestCount": "Número de Invitados",
+      "package": "Paquete Preferido",
+      "eventType": "Tipo de Evento",
+      "message": "Detalles Adicionales",
+      "submitBtn": "Solicitar Cotización"
+    }
   },
   "reviewsPage": {
     "title": "Reseñas de Clientes",

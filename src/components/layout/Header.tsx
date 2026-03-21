@@ -20,10 +20,10 @@ const Header = () => {
   const navLinks = [
     { name: t("home"), path: "/" },
     { name: t("menu"), path: "/menu" },
-    { name: `${t("catering")} (${t("common.comingSoon")})`, path: "/catering" },
+    { name: t("catering"), path: "/catering" },
     { name: t("about"), path: "/about" },
     { name: t("gallery"), path: "/gallery" },
-    { name: `${t("reviews")} (${t("common.comingSoon")})`, path: "/reviews" },
+    { name: t("reviews"), path: "/reviews" },
     { name: t("contact"), path: "/contact" },
   ];
 
@@ -235,4 +235,3 @@ const Header = () => {
 };
 
 export default Header;
-
