@@ -61,13 +61,13 @@ const Footer = () => {
                 <Phone className="w-4 md:w-5 h-4 md:h-5 text-accent flex-shrink-0" />
                 <span>(615) 230-8868</span>
               </a>
-              <a
-                href="mailto:Info@emmettsoulfood.com"
-                className="flex items-center gap-2 md:gap-3 text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors break-all"
+              <button
+                onClick={() => window.location.href = 'mailto:Info@emmettsoulfood.com'}
+                className="flex items-center gap-2 md:gap-3 text-secondary-foreground/80 text-xs md:text-sm hover:text-accent transition-colors break-all cursor-pointer border-none bg-inherit p-0"
               >
                 <Mail className="w-4 md:w-5 h-4 md:h-5 text-accent flex-shrink-0" />
                 <span>Info@emmettsoulfood.com</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>

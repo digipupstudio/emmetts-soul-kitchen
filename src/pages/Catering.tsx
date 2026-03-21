@@ -71,9 +71,9 @@ const Catering = () => {
                 </div>
               </a>
 
-              <a
-                href="mailto:Info@emmettsoulfood.com"
-                className="flex flex-col items-center gap-4 p-6 bg-card rounded-xl hover:shadow-warm transition-shadow text-center"
+              <button
+                onClick={() => window.location.href = 'mailto:Info@emmettsoulfood.com'}
+                className="flex flex-col items-center gap-4 p-6 bg-card rounded-xl hover:shadow-warm transition-shadow text-center cursor-pointer border-none bg-inherit"
               >
                 <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center">
                   <Mail className="w-7 h-7 text-accent" />
@@ -82,7 +82,7 @@ const Catering = () => {
                   <p className="font-semibold text-foreground">{t("cateringPage.email") || "Email"}</p>
                   <p className="text-secondary-foreground/80 text-sm">Info@emmettsoulfood.com</p>
                 </div>
-              </a>
+              </button>
 
               <a
                 href="https://www.facebook.com/emmettskitchen"

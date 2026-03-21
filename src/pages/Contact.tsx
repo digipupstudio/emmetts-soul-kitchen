@@ -75,9 +75,9 @@ const Contact = () => {
                   </div>
                 </a>
 
-                <a
-                  href="mailto:Info@emmettsoulfood.com"
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow"
+                <button
+                  onClick={() => window.location.href = 'mailto:Info@emmettsoulfood.com'}
+                  className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow cursor-pointer border-none bg-inherit"
                 >
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
                     <Mail className="w-6 h-6 text-accent" />
@@ -86,7 +86,7 @@ const Contact = () => {
                     <p className="font-semibold text-foreground">{t("contactPage.email")}</p>
                     <p className="text-muted-foreground">Info@emmettsoulfood.com</p>
                   </div>
-                </a>
+                </button>
 
                 <a
                   href="https://www.facebook.com/emmettskitchen"
