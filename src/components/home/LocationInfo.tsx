@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const LocationInfo = () => {
   const { t } = useTranslation();
+
+  const hoursData = [
+    { day: t("service.thursday"), hours: t("service.thursdayHours") },
+    { day: t("service.friday"), hours: t("service.fridayHours") },
+    { day: t("service.saturday"), hours: t("service.saturdayHours") },
+    { day: t("service.sunday"), hours: t("service.sundayHours") },
+    { day: t("service.monday"), hours: t("service.mondayHours") }
+  ];
 
   return (
     <section className="section-padding bg-highlight/30">
@@ -24,6 +32,35 @@ const LocationInfo = () => {
               Gallatin, Tennessee<br />
               <span className="text-primary mt-2 inline-block text-base sm:text-lg">{t("location.formerPanda")}</span>
             </p>
+          </div>
+        </motion.div>
+
+        {/* Hours Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-8 sm:mb-12 bg-white p-6 sm:p-8 rounded-lg sm:rounded-2xl shadow-lg border-2 border-secondary/20"
+        >
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-center gap-3 mb-6 sm:mb-8">
+              <Clock className="w-6 h-6 text-primary flex-shrink-0" />
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{t("service.hours")}</h3>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {hoursData.map((item) => (
+                <div key={item.day} className="text-center">
+                  <p className="font-semibold text-gray-900 text-sm sm:text-base">{item.day}</p>
+                  <p className="text-gray-700 text-xs sm:text-sm">{item.hours}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t-2 border-primary/20">
+              <p className="text-center text-primary font-semibold text-sm sm:text-base leading-relaxed">
+                {t("service.menuNotice")}
+              </p>
+            </div>
           </div>
         </motion.div>
 

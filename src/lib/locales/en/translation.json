@@ -74,9 +74,19 @@
   },
   "service": {
     "hours": "Operating Hours",
-    "days": "Friday to Monday",
-    "weekNotice": "(First week hours)",
-    "servingNotice": "Serving surrounding counties and cities"
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "monday": "Monday",
+    "closed": "Closed",
+    "thursdayHours": "Closed",
+    "fridayHours": "11am - 7pm",
+    "saturdayHours": "Closed",
+    "sundayHours": "11am - 6pm",
+    "mondayHours": "11am - 7pm",
+    "servingNotice": "Serving surrounding counties and cities",
+    "menuNotice": "Check our Facebook page for today's updated menu and exciting new deals!"
   },
   "menuPage": {
     "title": "Soul Food Menu",

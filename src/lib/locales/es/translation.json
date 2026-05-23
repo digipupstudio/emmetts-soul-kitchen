@@ -74,9 +74,19 @@
   },
   "service": {
     "hours": "Horario de Atención",
-    "days": "Viernes a Lunes",
-    "weekNotice": "(Horario de la primera semana)",
-    "servingNotice": "Sirviendo a condados y ciudades circundantes"
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "monday": "Lunes",
+    "closed": "Cerrado",
+    "thursdayHours": "Cerrado",
+    "fridayHours": "11am - 7pm",
+    "saturdayHours": "Cerrado",
+    "sundayHours": "11am - 6pm",
+    "mondayHours": "11am - 7pm",
+    "servingNotice": "Sirviendo a condados y ciudades circundantes",
+    "menuNotice": "¡Consulta nuestra página de Facebook para el menú actualizado de hoy y emocionantes ofertas nuevas!"
   },
   "menuPage": {
     "title": "Menú de Comida Soul",
