@@ -5,6 +5,7 @@ import FacebookVideos from "@/components/home/FacebookVideos";
 import Testimonials from "@/components/home/Testimonials";
 import LocationInfo from "@/components/home/LocationInfo";
 import VeteranOwned from "@/components/home/VeteranOwned";
+import Hours from "@/components/home/Hours";
 
 const Index = () => {
   return (
@@ -16,6 +17,11 @@ const Index = () => {
       {/* Testimonials section hidden - will be visible again when ready */}
       {/* <Testimonials /> */}
       <VeteranOwned />
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <Hours />
+        </div>
+      </section>
       <LocationInfo />
     </Layout>
   );

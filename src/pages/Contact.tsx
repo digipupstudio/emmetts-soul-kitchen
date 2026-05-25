@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Phone, Mail, MapPin, Send, Clock, Facebook } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import Hours from "@/components/home/Hours";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -49,61 +50,65 @@ const Contact = () => {
       {/* Contact Content */}
       <section className="section-padding bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="space-y-6"
             >
-              <h2 className="font-heading text-3xl font-bold text-foreground mb-8">
-                {t("contactPage.getInTouch")}
-              </h2>
+              <div>
+                <h2 className="font-heading text-3xl font-bold text-foreground mb-6">
+                  {t("contactPage.getInTouch")}
+                </h2>
 
-              <div className="space-y-6">
-                <a
-                  href="tel:+16152308868"
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">{t("contactPage.phone")}</p>
-                    <p className="text-muted-foreground">(615) 230-8868</p>
-                  </div>
-                </a>
+                <div className="space-y-4">
+                  <a
+                    href="tel:+16152308868"
+                    className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow"
+                  >
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">{t("contactPage.phone")}</p>
+                      <p className="text-muted-foreground">(615) 230-8868</p>
+                    </div>
+                  </a>
 
-                <button
-                  onClick={() => window.location.href = 'mailto:Info@emmettsoulfood.com'}
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow cursor-pointer border-none bg-inherit"
-                >
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">{t("contactPage.email")}</p>
-                    <p className="text-muted-foreground">Info@emmettsoulfood.com</p>
-                  </div>
-                </button>
+                  <button
+                    onClick={() => window.location.href = 'mailto:Info@emmettsoulfood.com'}
+                    className="w-full flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow cursor-pointer border-none"
+                  >
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-semibold text-foreground">{t("contactPage.email")}</p>
+                      <p className="text-muted-foreground">Info@emmettsoulfood.com</p>
+                    </div>
+                  </button>
 
-                <a
-                  href="https://www.facebook.com/emmettskitchen"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Facebook className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Facebook</p>
-                    <p className="text-muted-foreground">@emmettskitchen</p>
-                  </div>
-                </a>
+                  <a
+                    href="https://www.facebook.com/emmettskitchen"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-card rounded-xl hover:shadow-warm transition-shadow"
+                  >
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                      <Facebook className="w-6 h-6 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Facebook</p>
+                      <p className="text-muted-foreground">@emmettskitchen</p>
+                    </div>
+                  </a>
+                </div>
               </div>
 
+              <Hours />
             </motion.div>
 
             {/* Contact Form */}

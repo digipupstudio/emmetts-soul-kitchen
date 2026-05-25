@@ -73,20 +73,20 @@
     "quote": "\"Sirviendo orgullosamente a nuestra comunidad con honor, integridad y la mejor comida soul en Tennessee.\""
   },
   "service": {
-    "hours": "Horario de Atención",
+    "hours": "Horario de Operación",
     "thursday": "Jueves",
     "friday": "Viernes",
     "saturday": "Sábado",
     "sunday": "Domingo",
     "monday": "Lunes",
     "closed": "Cerrado",
-    "thursdayHours": "Cerrado",
-    "fridayHours": "11am - 7pm",
+    "thursdayHours": "11 AM – 7 PM",
+    "fridayHours": "11 AM – 7 PM",
     "saturdayHours": "Cerrado",
-    "sundayHours": "11am - 6pm",
-    "mondayHours": "11am - 7pm",
+    "sundayHours": "11 AM – 6 PM",
+    "mondayHours": "11 AM – 7 PM",
     "servingNotice": "Sirviendo a condados y ciudades circundantes",
-    "menuNotice": "¡Consulta nuestra página de Facebook para el menú actualizado de hoy y emocionantes ofertas nuevas!"
+    "menuNotice": "Los especiales diarios y los artículos de menú actualizados se publican en nuestra página de Facebook. Los artículos del menú rotan regularmente."
   },
   "menuPage": {
     "title": "Menú de Comida Soul",

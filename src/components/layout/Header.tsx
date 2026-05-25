@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Globe, Check } from "lucide-react";
+import { Menu, X, Phone, Globe, Check, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import {
@@ -196,6 +196,31 @@ const Header = () => {
                 ))}
 
                 <div className="mt-4 pt-6 border-t border-border flex flex-col gap-4">
+                  <div>
+                    <p className="text-xs font-bold text-muted-foreground mb-3 flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      {t("service.hours")}
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 text-xs bg-background p-2 rounded">
+                      <div>
+                        <p className="font-semibold text-foreground">{t("service.thursday")}</p>
+                        <p className="text-muted-foreground">{t("service.thursdayHours")}</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{t("service.friday")}</p>
+                        <p className="text-muted-foreground">{t("service.fridayHours")}</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{t("service.sunday")}</p>
+                        <p className="text-muted-foreground">{t("service.sundayHours")}</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{t("service.monday")}</p>
+                        <p className="text-muted-foreground">{t("service.mondayHours")}</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="flex items-center justify-between px-3">
                     <span className="text-sm font-semibold text-muted-foreground">{t("common.language")}</span>
                     <div className="flex gap-2">
