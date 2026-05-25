@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Layout from "@/components/layout/Layout";
+import MenuNotice from "@/components/home/MenuNotice";
 import { Button } from "@/components/ui/button";
 import friedCatfish from "@/assets/fried-catfish.png";
 import meatloaf from "@/assets/meatloaf.png";
@@ -110,6 +111,13 @@ const Menu = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Menu Notice */}
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <MenuNotice />
         </div>
       </section>
 

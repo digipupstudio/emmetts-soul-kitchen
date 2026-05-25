@@ -73,20 +73,20 @@
     "quote": "\"Proudly serving our community with honor, integrity, and the best soul food in Tennessee.\""
   },
   "service": {
-    "hours": "Operating Hours",
+    "hours": "Hours of Operation",
     "thursday": "Thursday",
     "friday": "Friday",
     "saturday": "Saturday",
     "sunday": "Sunday",
     "monday": "Monday",
     "closed": "Closed",
-    "thursdayHours": "Closed",
-    "fridayHours": "11am - 7pm",
+    "thursdayHours": "11 AM – 7 PM",
+    "fridayHours": "11 AM – 7 PM",
     "saturdayHours": "Closed",
-    "sundayHours": "11am - 6pm",
-    "mondayHours": "11am - 7pm",
+    "sundayHours": "11 AM – 6 PM",
+    "mondayHours": "11 AM – 7 PM",
     "servingNotice": "Serving surrounding counties and cities",
-    "menuNotice": "Check our Facebook page for today's updated menu and exciting new deals!"
+    "menuNotice": "Daily specials and updated menu items are posted on our Facebook page. Menu items rotate regularly."
   },
   "menuPage": {
     "title": "Soul Food Menu",

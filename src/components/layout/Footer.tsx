@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, Facebook, Instagram, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
 
@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container-custom py-8 md:py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-10">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1 space-y-4">
             <img src={logo} alt="Ms. Emmett's Soul Food" className="h-16 md:h-24 w-auto" />
@@ -68,6 +68,32 @@ const Footer = () => {
                 <Mail className="w-4 md:w-5 h-4 md:h-5 text-accent flex-shrink-0" />
                 <span>Info@emmettsoulfood.com</span>
               </button>
+            </div>
+          </div>
+
+          {/* Hours */}
+          <div>
+            <h4 className="font-heading text-base md:text-lg font-bold mb-3 md:mb-4 flex items-center gap-2">
+              <Clock className="w-4 md:w-5 h-4 md:h-5 text-accent flex-shrink-0" />
+              {t("service.hours")}
+            </h4>
+            <div className="space-y-2 text-xs md:text-sm">
+              <div className="flex justify-between gap-2">
+                <span className="font-medium text-secondary-foreground/80">{t("service.thursday")}</span>
+                <span className="text-secondary-foreground/60">{t("service.thursdayHours")}</span>
+              </div>
+              <div className="flex justify-between gap-2">
+                <span className="font-medium text-secondary-foreground/80">{t("service.friday")}</span>
+                <span className="text-secondary-foreground/60">{t("service.fridayHours")}</span>
+              </div>
+              <div className="flex justify-between gap-2">
+                <span className="font-medium text-secondary-foreground/80">{t("service.sunday")}</span>
+                <span className="text-secondary-foreground/60">{t("service.sundayHours")}</span>
+              </div>
+              <div className="flex justify-between gap-2">
+                <span className="font-medium text-secondary-foreground/80">{t("service.monday")}</span>
+                <span className="text-secondary-foreground/60">{t("service.mondayHours")}</span>
+              </div>
             </div>
           </div>
         </div>
