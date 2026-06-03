@@ -86,12 +86,12 @@
     "sundayHours": "11 AM – 6 PM",
     "mondayHours": "11 AM – 7 PM",
     "servingNotice": "Serving surrounding counties and cities",
-    "menuNotice": "Daily specials and updated menu items are posted on our Facebook page. Menu items rotate regularly."
+    "menuNotice": "IMPORTANT NOTICE: The dishes and photos shown below are our signature specialties, but our daily menu changes and rotates regularly! To see exactly what we are serving today, you MUST check our Facebook page for today's daily menu."
   },
   "menuPage": {
     "title": "Soul Food Menu",
     "subtitle": "Pick Your Plate",
-    "dailyNotice": "Menu changes daily/weekly",
+    "dailyNotice": "Our daily rotating menu is posted every operating day on our Facebook page!",
     "meatsTitle": "Soul Food Meats & More",
     "sidesTitle": "Soul Food Sides",
     "meats": {
