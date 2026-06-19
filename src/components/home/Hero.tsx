@@ -16,7 +16,7 @@ const Hero = () => {
       />
 
       {/* Overlay */}
-      <div className="hero-overlay absolute inset-0 opacity-40" />
+      <div className="hero-overlay absolute inset-0 opacity-60" />
 
       {/* Content */}
       <div className="relative z-10 py-12 sm:py-16 md:py-20 flex justify-start px-4 sm:px-6 lg:px-8">
@@ -63,14 +63,14 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-start"
+            className="flex flex-row gap-2 sm:gap-3 justify-start"
           >
-            <Button variant="hero" size="lg" asChild className="sm:size-xl">
+            <Button variant="hero" size="md" asChild>
               <Link to="/contact">
                 {t("hero.contactBtn")}
               </Link>
             </Button>
-            <Button variant="heroOutline" size="lg" asChild className="sm:size-xl">
+            <Button variant="heroOutline" size="md" asChild>
               <Link to="/menu">
                 {t("hero.menuBtn")}
               </Link>
