@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-start overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="hero-overlay absolute inset-0 opacity-40" />
 
       {/* Content */}
-      <div className="container-custom relative z-10 text-center lg:text-left py-12 sm:py-16 md:py-20 flex lg:justify-start">
+      <div className="container-custom relative z-10 py-12 sm:py-16 md:py-20 flex justify-start">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto mb-4 sm:mb-6 italic drop-shadow"
+            className="text-white/80 text-base sm:text-lg max-w-2xl mb-4 sm:mb-6 italic drop-shadow"
           >
             {t("hero.supportingStatement")}
           </motion.p>
@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-white/90 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-10 drop-shadow"
+            className="text-white/90 text-base sm:text-lg md:text-xl max-w-2xl mb-6 sm:mb-10 drop-shadow"
           >
             {t("hero.description")}
           </motion.p>
@@ -63,7 +63,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center"
+            className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-start"
           >
             <Button variant="hero" size="lg" asChild className="sm:size-xl">
               <Link to="/contact">
