@@ -8,6 +8,9 @@ import friedCatfish from "@/assets/fried-catfish.png";
 import meatloaf from "@/assets/meatloaf.png";
 import bbqRibs from "@/assets/bbq-ribs.png";
 import potRoast from "@/assets/pot-roast.png";
+import friedChickenImg from "@/assets/fried-chicken.jpg";
+import porkChopsImg from "@/assets/pork-chops.jpg";
+import macCheeseImg from "@/assets/mac-cheese.jpg";
 
 const Menu = () => {
   const { t } = useTranslation();
@@ -24,7 +27,8 @@ const Menu = () => {
     {
       name: t("menuPage.meats.friedChicken"),
       description: t("menuPage.meats.chickenDesc"),
-      featured: true
+      featured: true,
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.meatloaf"),
@@ -35,20 +39,24 @@ const Menu = () => {
     {
       name: t("menuPage.meats.chickenLivers"),
       description: t("menuPage.meats.liversDesc"),
-      featured: true
+      featured: true,
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.gizzards"),
       description: t("menuPage.meats.gizzardsDesc"),
-      featured: true
+      featured: true,
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.porkChops"),
-      description: t("menuPage.meats.chopsDesc")
+      description: t("menuPage.meats.chopsDesc"),
+      image: porkChopsImg
     },
     {
       name: t("menuPage.meats.bakedChicken"),
-      description: t("menuPage.meats.bakedChickenDesc")
+      description: t("menuPage.meats.bakedChickenDesc"),
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.ribTips"),
@@ -57,7 +65,8 @@ const Menu = () => {
     },
     {
       name: t("menuPage.meats.friedChops"),
-      description: t("menuPage.meats.friedChopsDesc")
+      description: t("menuPage.meats.friedChopsDesc"),
+      image: porkChopsImg
     },
   ];
 
@@ -116,7 +125,7 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Soul Food Meats & More Section */}
+      {/* Featured Dishes Section */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -128,25 +137,21 @@ const Menu = () => {
           >
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 border-b-4 border-primary pb-2 sm:pb-3 md:pb-4">
               <h2 className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
-                Soul Food Meats & More
+                Featured Dishes
               </h2>
             </div>
           </motion.div>
 
           {/* Responsive Grid: 1 col (mobile), 2 cols (tablet), 3 cols (desktop), 4 cols (xl) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {soulFoodMeats.map((item, index) => (
+            {soulFoodMeats.filter(item => item.featured).map((item, index) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className={`flex flex-col h-full overflow-hidden rounded-lg shadow-warm border-2 transition-all hover:shadow-lg hover:scale-105 ${
-                  item.featured
-                    ? "bg-highlight/10 border-highlight"
-                    : "bg-white border-gray-100"
-                }`}
+                className="flex flex-col h-full overflow-hidden rounded-lg shadow-warm border-2 bg-highlight/10 border-highlight transition-all hover:shadow-lg hover:scale-105"
               >
                 {/* Image Container */}
                 {item.image && (
@@ -166,12 +171,70 @@ const Menu = () => {
                     <h3 className="font-heading font-black text-sm xs:text-base sm:text-lg text-foreground">
                       {item.name}
                     </h3>
-                    {item.featured && (
-                      <span className="inline-flex items-center bg-primary text-white text-xs px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap">
-                        {t("menuPage.meats.specialty")}
-                      </span>
-                    )}
+                    <span className="inline-flex items-center bg-primary text-white text-xs px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap">
+                      {t("menuPage.meats.specialty")}
+                    </span>
                   </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-grow">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Available Dishes Section */}
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 sm:mb-12 md:mb-16"
+          >
+            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 border-b-4 border-primary pb-2 sm:pb-3 md:pb-4">
+              <h2 className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
+                All Available Dishes
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-sm md:text-base max-w-3xl">
+              <span className="font-semibold">Note:</span> Our menu is not fixed and changes regularly based on availability and daily preparations. Items listed below represent our typical offerings, but availability may vary. Always check our Facebook page for the current day's menu.
+            </p>
+          </motion.div>
+
+          {/* Responsive Grid: 1 col (mobile), 2 cols (tablet), 3 cols (desktop), 4 cols (xl) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            {soulFoodMeats.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex flex-col h-full overflow-hidden rounded-lg shadow-warm border-2 bg-white border-gray-100 transition-all hover:shadow-lg hover:scale-105"
+              >
+                {/* Image Container */}
+                {item.image && (
+                  <div className="w-full aspect-square md:aspect-[4/3] overflow-hidden rounded-t-lg bg-gray-200">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+
+                {/* Content Container */}
+                <div className="flex flex-col flex-grow p-3 sm:p-4 md:p-5">
+                  {/* Title */}
+                  <h3 className="font-heading font-black text-sm xs:text-base sm:text-lg text-foreground mb-2 sm:mb-3">
+                    {item.name}
+                  </h3>
 
                   {/* Description */}
                   <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-grow">
@@ -196,44 +259,6 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Soul Food Sides Section */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-8 sm:mb-12 md:mb-16"
-          >
-            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 md:mb-8 border-b-4 border-primary pb-2 sm:pb-3 md:pb-4">
-              <h2 className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground uppercase tracking-tight">
-                Soul Food Sides
-              </h2>
-            </div>
-          </motion.div>
-
-          {/* Responsive Grid: 1 col (mobile), 2 cols (tablet), 3 cols (desktop), 4 cols (xl) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {(t("menuPage.allSides", { returnObjects: true }) as string[]).map((side, index) => (
-              <motion.div
-                key={side}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex flex-col h-full overflow-hidden rounded-lg shadow-warm border-2 border-secondary/30 bg-gradient-to-br from-secondary/20 to-primary/10 transition-all hover:border-secondary/70 hover:shadow-lg hover:scale-105"
-              >
-                <div className="flex flex-col flex-grow items-center justify-center p-3 sm:p-4 md:p-5 min-h-28 sm:min-h-32 md:min-h-40">
-                  <h3 className="font-heading font-bold text-xs xs:text-sm sm:text-base text-foreground text-center leading-tight">
-                    {side}
-                  </h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

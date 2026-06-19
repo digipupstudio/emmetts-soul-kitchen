@@ -7,15 +7,17 @@ import porkChops from "@/assets/pork-chops.jpg";
 import catfishGrits from "@/assets/catfish-grits.jpg";
 import macCheese from "@/assets/mac-cheese.jpg";
 import peachCobbler from "@/assets/peach-cobbler.jpg";
+import meatloaf from "@/assets/meatloaf.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const galleryImages = [
-  { src: heroBg, alt: "Soul food dish", category: "food" },
-  { src: friedChicken, alt: "Fried chicken", category: "food" },
-  { src: porkChops, alt: "Smothered pork chops", category: "food" },
-  { src: catfishGrits, alt: "Catfish and grits", category: "food" },
-  { src: macCheese, alt: "Mac and cheese", category: "food" },
-  { src: peachCobbler, alt: "Peach cobbler", category: "food" },
+  { src: heroBg, alt: "Soul food dish", category: "food", title: "Soul Food Medley", description: "A classic soul food dish" },
+  { src: friedChicken, alt: "Fried chicken", category: "food", title: "Golden Fried Chicken", description: "Crispy and delicious fried chicken" },
+  { src: porkChops, alt: "Smothered pork chops", category: "food", title: "Smothered Pork Chops", description: "Tender pork chops with savory gravy" },
+  { src: catfishGrits, alt: "Catfish and grits", category: "food", title: "Catfish & Grits", description: "Classic Southern catfish with creamy grits" },
+  { src: macCheese, alt: "Mac and cheese", category: "food", title: "Creamy Mac & Cheese", description: "Rich and cheesy Southern comfort" },
+  { src: peachCobbler, alt: "Peach cobbler", category: "food", title: "Homemade Peach Cobbler", description: "Warm peach cobbler with buttery crust" },
+  { src: meatloaf, alt: "Homemade meatloaf", category: "food", title: "Savory Meatloaf", description: "Traditional meatloaf with tangy glaze" },
 ];
 
 const Gallery = () => {
