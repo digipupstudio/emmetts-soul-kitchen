@@ -8,6 +8,9 @@ import friedCatfish from "@/assets/fried-catfish.png";
 import meatloaf from "@/assets/meatloaf.png";
 import bbqRibs from "@/assets/bbq-ribs.png";
 import potRoast from "@/assets/pot-roast.png";
+import friedChickenImg from "@/assets/fried-chicken.jpg";
+import porkChopsImg from "@/assets/pork-chops.jpg";
+import macCheeseImg from "@/assets/mac-cheese.jpg";
 
 const Menu = () => {
   const { t } = useTranslation();
@@ -24,7 +27,8 @@ const Menu = () => {
     {
       name: t("menuPage.meats.friedChicken"),
       description: t("menuPage.meats.chickenDesc"),
-      featured: true
+      featured: true,
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.meatloaf"),
@@ -35,20 +39,24 @@ const Menu = () => {
     {
       name: t("menuPage.meats.chickenLivers"),
       description: t("menuPage.meats.liversDesc"),
-      featured: true
+      featured: true,
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.gizzards"),
       description: t("menuPage.meats.gizzardsDesc"),
-      featured: true
+      featured: true,
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.porkChops"),
-      description: t("menuPage.meats.chopsDesc")
+      description: t("menuPage.meats.chopsDesc"),
+      image: porkChopsImg
     },
     {
       name: t("menuPage.meats.bakedChicken"),
-      description: t("menuPage.meats.bakedChickenDesc")
+      description: t("menuPage.meats.bakedChickenDesc"),
+      image: friedChickenImg
     },
     {
       name: t("menuPage.meats.ribTips"),
@@ -57,7 +65,8 @@ const Menu = () => {
     },
     {
       name: t("menuPage.meats.friedChops"),
-      description: t("menuPage.meats.friedChopsDesc")
+      description: t("menuPage.meats.friedChopsDesc"),
+      image: porkChopsImg
     },
   ];
 
