@@ -19,12 +19,12 @@ const Hero = () => {
       <div className="hero-overlay absolute inset-0 opacity-40" />
 
       {/* Content */}
-      <div className="container-custom relative z-10 py-12 sm:py-16 md:py-20 flex justify-start">
+      <div className="relative z-10 py-12 sm:py-16 md:py-20 flex justify-start px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl lg:max-w-3xl px-4 lg:pl-0"
+          className="max-w-2xl lg:max-w-3xl"
         >
           <motion.p
             initial={{ opacity: 0 }}
