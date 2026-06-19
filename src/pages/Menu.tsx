@@ -56,11 +56,6 @@ const Menu = () => {
       image: bbqRibs
     },
     {
-      name: t("menuPage.meats.oxtails"),
-      description: t("menuPage.meats.oxtailsDesc"),
-      image: "https://cdn.builder.io/api/v1/image/assets%2F8e76ff0f37864e249bbdbdd981b026fa%2Ff0beb89f147a416b9c12b0de136062b6?format=webp&width=800&height=1200"
-    },
-    {
       name: t("menuPage.meats.friedChops"),
       description: t("menuPage.meats.friedChopsDesc")
     },

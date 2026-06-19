@@ -24,6 +24,7 @@
   "featured": {
     "tagline": "Our Favorites",
     "title": "Featured Dishes",
+    "notice": "These are our signature specialties, but our daily menu rotates! Check our Facebook page for today's daily menu.",
     "viewAll": "View Full Menu",
     "dishes": {
       "catfish": {
@@ -154,7 +155,6 @@
       "Salmon",
       "Chitterlings (Chitlins)",
       "Pig Feet",
-      "Oxtails",
       "Neck Bones",
       "Turkey Wings (smothered)",
       "Turkey Necks",
