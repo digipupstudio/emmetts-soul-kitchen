@@ -95,7 +95,7 @@ const About = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
               {t("aboutPage.missionTitle")}
             </h2>
-            <p className="text-lg text-muted-foreground font-bold">
+            <p className="text-lg text-black font-bold">
               {t("aboutPage.missionDesc")}
             </p>
           </motion.div>
