@@ -50,9 +50,12 @@ const FeaturedDishes = () => {
           className="text-center mb-12"
         >
           <p className="text-accent font-semibold mb-2">{t("featured.tagline")}</p>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {t("featured.title")}
           </h2>
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+            {t("featured.notice")}
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
